@@ -1,234 +1,76 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Лічильник часу</title>
 
-<style>
+<title>Вівюрка Олег Миколайович</title>
 
-*{
-box-sizing:border-box;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-margin:0;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-background:linear-gradient(160deg,#07111f,#102845,#081320);
-overflow:hidden;
-color:white;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body::before{
-content:"";
-position:fixed;
-width:700px;
-height:700px;
-left:-180px;
-top:-220px;
-background:radial-gradient(circle,
-rgba(86,156,255,.25),
-transparent 70%);
-filter:blur(35px);
-}
-
-.wrapper{
-position:relative;
-z-index:2;
-text-align:center;
-padding:30px;
-}
-
-h1{
-margin:0;
-font-size:42px;
-font-weight:700;
-letter-spacing:1px;
-}
-
-.line{
-width:170px;
-height:3px;
-background:#6ea8ff;
-margin:18px auto 40px;
-border-radius:20px;
-}
-
-.counter{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.box{
-width:150px;
-height:150px;
-border-radius:24px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12);
-backdrop-filter:blur(18px);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-transition:.3s;
-animation:float 5s ease-in-out infinite;
-}
-
-.box:nth-child(2){
-animation-delay:.4s;
-}
-
-.box:nth-child(3){
-animation-delay:.8s;
-}
-
-.box:nth-child(4){
-animation-delay:1.2s;
-}
-
-.box:hover{
-transform:translateY(-6px);
-}
-
-@keyframes float{
-
-50%{
-transform:translateY(-6px);
-}
-
-}
-
-.number{
-font-size:58px;
-font-weight:700;
-}
-
-.label{
-margin-top:12px;
-font-size:14px;
-letter-spacing:2px;
-opacity:.8;
-text-transform:uppercase;
-}
-.quote{
-margin:55px auto 0;
-max-width:760px;
-font-size:20px;
-line-height:1.7;
-font-style:italic;
-color:rgba(255,255,255,.86);
-}
-
-@media(max-width:700px){
-
-h1{
-font-size:30px;
-}
-
-.box{
-width:110px;
-height:110px;
-}
-
-.number{
-font-size:40px;
-}
-
-.label{
-font-size:13px;
-}
-
-.quote{
-font-size:17px;
-margin-top:35px;
-padding:0 20px;
-}
-
-.counter{
-gap:12px;
-}
-
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="wrapper">
+<header class="hero">
 
-<h1>Минуло з 29.06.2024</h1>
+<div class="overlay"></div>
 
-<div class="line"></div>
+<img src="oleg.jpg" class="hero-image">
 
-<div class="counter">
+<div class="hero-content">
 
-<div class="box">
-<div id="days" class="number">0</div>
-<div class="label">ДНІВ</div>
-</div>
+<h1>Вівюрка<br>Олег Миколайович</h1>
 
-<div class="box">
-<div id="hours" class="number">0</div>
-<div class="label">ГОДИН</div>
-</div>
+<h2>
+Боєць Об'єднаної штурмової бригади<br>
+Національної поліції України «Лють»
+</h2>
 
-<div class="box">
-<div id="minutes" class="number">0</div>
-<div class="label">ХВИЛИН</div>
-</div>
+<p>
 
-<div class="box">
-<div id="seconds" class="number">0</div>
-<div class="label">СЕКУНД</div>
-</div>
+Він пішов захищати Україну,
+залишивши вдома тих, хто щодня
+чекає його повернення.
 
-</div>
-
-<p class="quote">
-Час не зменшує пам'ять.<br>
-Він лише нагадує, як довго триває очікування.
 </p>
 
+<p>
+
+З 29 червня 2024 року
+Олег вважається зниклим безвісти
+під час виконання бойового завдання.
+
+</p>
+
+<p>
+
+Цей сайт створений як місце пам'яті,
+віри та надії.
+
+</p>
+
+<div class="buttons">
+
+<a href="about.html">Про Олега</a>
+
+<a href="timeline.html">Хроніка боротьби</a>
+
+<a href="counter.html">Лічильник часу</a>
+
 </div>
 
-<script>
+</div>
 
-const startDate = new Date("2024-06-29T00:00:00");
-
-function updateCounter(){
-
-const now = new Date();
-
-const diff = now - startDate;
-
-const days = Math.floor(diff / (1000*60*60*24));
-
-const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-
-const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
-
-const seconds = Math.floor((diff % (1000*60)) / 1000);
-    document.getElementById("days").textContent = days;
-document.getElementById("hours").textContent = hours.toString().padStart(2,"0");
-document.getElementById("minutes").textContent = minutes.toString().padStart(2,"0");
-document.getElementById("seconds").textContent = seconds.toString().padStart(2,"0");
-
-}
-
-updateCounter();
-
-setInterval(updateCounter,1000);
-
-</script>
+</header>
 
 </body>
+
 </html>
