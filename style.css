@@ -289,3 +289,15 @@ h2{
 
 
 }
+.buttons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none !important;
+    color:white !important;
+    border:2px solid rgba(255,255,255,.4);
+    padding:14px 32px;
+    border-radius:50px;
+    background:rgba(255,255,255,.08);
+    font-size:17px;
+}
