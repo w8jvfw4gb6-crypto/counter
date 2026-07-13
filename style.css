@@ -655,3 +655,187 @@ h2{
 }
 
 }
+/* Сторінка Я — твій голос */
+
+.voice-page{
+
+    min-height:100vh;
+    background:#09111d;
+    color:white;
+    padding:60px 8%;
+}
+
+
+.voice-page h1{
+
+    text-align:center;
+    font-size:52px;
+    margin-bottom:35px;
+
+}
+
+
+.voice-quote{
+
+    max-width:800px;
+    margin:0 auto 50px;
+    padding:35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+.voice-quote p{
+
+    font-size:26px;
+    line-height:1.6;
+    font-style:italic;
+    color:#d7dfeb;
+
+}
+
+
+.voice-intro{
+
+    max-width:850px;
+    margin:0 auto 70px;
+
+}
+
+
+.voice-intro p{
+
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:25px;
+
+}
+
+
+.timeline{
+
+    position:relative;
+
+}
+
+
+.timeline-date{
+
+    color:#5ba8ff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+.timeline-content{
+
+    background:rgba(255,255,255,.04);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+
+.timeline-content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+
+.timeline-video{
+
+    width:100%;
+
+    margin-top:25px;
+
+    border-radius:20px;
+
+}
+
+
+.featured .timeline-content{
+
+    border:1px solid rgba(91,168,255,.4);
+
+}
+
+
+.event-quote{
+
+    margin:35px 0;
+
+    padding:25px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-style:italic;
+
+    color:#d7dfeb;
+
+    background:rgba(91,168,255,.08);
+
+    border-radius:20px;
+
+}
+
+
+@media(max-width:900px){
+
+    .voice-page{
+
+        padding:40px 5%;
+
+    }
+
+
+    .voice-page h1{
+
+        font-size:36px;
+
+    }
+
+
+    .voice-quote p{
+
+        font-size:20px;
+
+    }
+
+
+    .voice-intro p{
+
+        font-size:17px;
+
+    }
+
+
+    .timeline-content{
+
+        padding:20px;
+
+    }
+
+}
