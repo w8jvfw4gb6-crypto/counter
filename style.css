@@ -53,7 +53,7 @@ transform:translate(-50%,-50%);
 
 z-index:2;
 
-text-align:center;
+text-align:left;
 
 width:90%;
 
@@ -108,6 +108,7 @@ color:#f4f4f4;
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
+}
 }
 
 .buttons a{
@@ -218,4 +219,5 @@ width:260px;
     font-style:italic;
     color:#ffffff;
     text-shadow:0 3px 8px rgba(0,0,0,0.9);
+    text-align:center;
 }
