@@ -194,3 +194,21 @@ width:260px;
 }
 
 }
+.counter{
+    margin-top:35px;
+    margin-bottom:35px;
+    text-align:center;
+}
+
+.counter h3{
+    font-size:22px;
+    font-weight:400;
+    color:#cfd8e5;
+    margin-bottom:15px;
+}
+
+#timer{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:2px;
+}
