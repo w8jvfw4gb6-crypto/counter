@@ -6,38 +6,64 @@
 <title>Лічильник часу</title>
 
 <style>
-body{
-    margin:0;
-    background:transparent;
-    font-family:Arial, sans-serif;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.container{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+.container {
+    text-align: center;
 }
 
-.box{
-    background:#ffffff;
-    width:110px;
-    padding:18px 10px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
+h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
-.number{
-    font-size:34px;
-    font-weight:bold;
-    color:#222;
+.counter {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.label{
-    margin-top:8px;
-    color:#666;
-    font-size:16px;
+.box {
+    width: 140px;
+    height: 140px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+    transition: .3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+.number {
+    font-size: 52px;
+    font-weight: bold;
+}
+
+.label {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 </style>
 </head>
@@ -46,58 +72,32 @@ body{
 
 <div class="container">
 
-<div class="box">
-<div class="number" id="days">0</div>
-<div class="label">днів</div>
-</div>
+<h1>Минуло з 29.06.2024</h1>
+
+<div class="counter">
 
 <div class="box">
-<div class="number" id="hours">0</div>
-<div class="label">годин</div>
-</div>
-
-<div class="box">
-<div class="number" id="minutes">0</div>
-<div class="label">хвилин</div>
+<div id="days" class="number">0</div>
+<div class="label">Днів</div>
 </div>
 
 <div class="box">
-<div class="number" id="seconds">0</div>
-<div class="label">секунд</div>
+<div id="hours" class="number">0</div>
+<div class="label">Годин</div>
+</div>
+
+<div class="box">
+<div id="minutes" class="number">0</div>
+<div class="label">Хвилин</div>
+</div>
+
+<div class="box">
+<div id="seconds" class="number">0</div>
+<div class="label">Секунд</div>
 </div>
 
 </div>
 
-<script>
-
-const startDate = new Date("2024-06-29T00:00:00");
-
-function updateCounter(){
-
-const now = new Date();
-
-const diff = now - startDate;
-
-const days = Math.floor(diff / (1000*60*60*24));
-
-const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-
-const minutes = Math.floor((diff%(1000*60*60))/(1000*60));
-
-const seconds = Math.floor((diff%(1000*60))/1000);
-
-document.getElementById("days").innerHTML=days;
-document.getElementById("hours").innerHTML=hours;
-document.getElementById("minutes").innerHTML=minutes;
-document.getElementById("seconds").innerHTML=seconds;
-
-}
-
-updateCounter();
-
-setInterval(updateCounter,1000);
-
-</script>
-
+</div>
 </body>
 </html>
