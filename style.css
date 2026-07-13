@@ -618,3 +618,40 @@ h2{
 }
 
 }
+.timeline-item{
+
+    margin:60px auto;
+    max-width:850px;
+    text-align:left;
+
+    border-left:3px solid rgba(91,168,255,.5);
+    padding-left:30px;
+
+}
+
+.timeline-item h2{
+
+    margin-bottom:20px;
+
+}
+
+.timeline-photo{
+
+    width:100%;
+    margin-top:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+@media(max-width:900px){
+
+.timeline-item{
+
+    padding-left:20px;
+
+}
+
+}
