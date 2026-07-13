@@ -308,3 +308,157 @@ h2{
     background:rgba(255,255,255,.08);
     font-size:17px;
 }
+/* Сторінка Про Олега */
+
+.about-page{
+
+    min-height:100vh;
+
+    background:#09111d;
+
+    color:white;
+
+    padding:60px 8%;
+
+    text-align:center;
+
+}
+
+
+.about-page h1{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.subtitle{
+
+    font-size:22px;
+
+    color:#cfd8e5;
+
+    margin-bottom:40px;
+
+    line-height:1.5;
+
+}
+
+
+
+.about-photo{
+
+    width:320px;
+
+    height:420px;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.5);
+
+    margin-bottom:40px;
+
+}
+
+
+
+.about-text{
+
+    max-width:800px;
+
+    margin:0 auto;
+
+}
+
+
+
+.about-text p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+    color:#f4f4f4;
+
+}
+
+
+
+.back-button{
+
+    display:inline-flex;
+
+    margin-top:30px;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    color:white;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+
+.back-button:hover{
+
+    background:#5ba8ff;
+
+}
+
+
+
+@media(max-width:900px){
+
+    .about-page{
+
+        padding:40px 5%;
+
+    }
+
+
+    .about-page h1{
+
+        font-size:34px;
+
+    }
+
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+
+    .about-photo{
+
+        width:260px;
+
+        height:340px;
+
+    }
+
+
+    .about-text p{
+
+        font-size:17px;
+
+    }
+
+}
