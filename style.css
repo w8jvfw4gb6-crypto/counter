@@ -45,7 +45,7 @@ body{
 
 position:absolute;
 
-top:50%;
+top:45%;
 
 left:50%;
 
@@ -220,4 +220,15 @@ width:260px;
     color:#ffffff;
     text-shadow:0 3px 8px rgba(0,0,0,0.9);
     text-align:center;
+}
+@media(max-width:900px){
+
+.hero-content{
+    top:42%;
+}
+
+h1{
+    font-size:38px;
+}
+
 }
