@@ -18,7 +18,6 @@ body{
     width:100%;
     min-height:100vh;
     overflow:hidden;
-    padding-bottom:40px;
 
 }
 
@@ -26,20 +25,24 @@ body{
 .hero-image{
 
     position:absolute;
+    top:0;
+    left:0;
+
     width:100%;
     height:100%;
 
     object-fit:cover;
-
     object-position:center 15%;
 
 }
 
 
-
 .overlay{
 
     position:absolute;
+    top:0;
+    left:0;
+
     width:100%;
     height:100%;
 
@@ -55,37 +58,27 @@ body{
 }
 
 
-
-
 .hero-content{
 
     position:relative;
 
-    top:auto;
-    left:auto;
+    z-index:2;
 
-    transform:none;
+    width:45%;
 
-    width:90%;
-
-    margin:0 auto;
+    margin-left:8%;
 
     padding-top:60px;
-    padding-bottom:40px;
+    padding-bottom:60px;
 
 }
-
-
 
 
 h1{
 
     font-size:64px;
-
     line-height:1.1;
-
     font-weight:700;
-
     margin-bottom:25px;
 
     text-shadow:
@@ -94,14 +87,10 @@ h1{
 }
 
 
-
-
 h2{
 
     font-size:22px;
-
     font-weight:400;
-
     line-height:1.5;
 
     color:#d7dfeb;
@@ -114,8 +103,6 @@ h2{
 }
 
 
-
-
 .description{
 
     max-width:420px;
@@ -126,9 +113,7 @@ h2{
 .description p{
 
     font-size:18px;
-
     line-height:1.7;
-
     margin-bottom:18px;
 
     text-shadow:
@@ -137,25 +122,18 @@ h2{
 }
 
 
-
-
 .counter{
 
     text-align:center;
-
     margin-top:35px;
 
 }
 
 
-
 #timer{
 
     font-size:32px;
-
     font-weight:700;
-
-    letter-spacing:1px;
 
     text-shadow:
     0 3px 10px rgba(0,0,0,.9);
@@ -163,15 +141,12 @@ h2{
 }
 
 
-
 .waiting-text{
 
     text-align:center;
-
     margin-top:20px;
 
     font-size:20px;
-
     font-style:italic;
 
     text-shadow:
@@ -180,12 +155,9 @@ h2{
 }
 
 
-
-
 .buttons{
 
     display:flex;
-
     justify-content:center;
 
     gap:20px;
@@ -195,8 +167,11 @@ h2{
 }
 
 
-
 .buttons a{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
     text-decoration:none;
 
@@ -219,12 +194,9 @@ h2{
 }
 
 
-
 .buttons a:hover{
 
     background:#5ba8ff;
-
-    border-color:#5ba8ff;
 
 }
 
@@ -235,18 +207,69 @@ h2{
 @media(max-width:900px){
 
 
+@media(max-width:900px){
+
+.hero{
+    min-height:110vh;
+}
+
+
 .hero-content{
-
-    top:40px;
-
-    left:5%;
-
-    transform:none;
 
     width:90%;
 
+    margin-left:5%;
+
+    padding-top:40px;
+    padding-bottom:40px;
+
 }
 
+
+h1{
+
+    font-size:42px;
+
+}
+
+
+h2{
+
+    font-size:18px;
+
+}
+
+
+.description p{
+
+    font-size:16px;
+
+}
+
+
+#timer{
+
+    font-size:24px;
+
+}
+
+
+.buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.buttons a{
+
+    width:260px;
+
+}
+
+}
 
 
 h1{
