@@ -17,72 +17,94 @@
 
 </head>
 
+
 <body>
 
 <header class="hero">
 
+<img src="IMG_6644.jpeg" class="hero-image">
+
 <div class="overlay"></div>
 
-<<img src="IMG_6644.jpeg" class="hero-image">
 
 <div class="hero-content">
 
-<h1>Вівюрка<br>Олег Миколайович</h1>
+
+<h1>
+Вівюрка<br>
+Олег Миколайович
+</h1>
+
 
 <h2>
 Боєць Об'єднаної штурмової бригади<br>
 Національної поліції України «Лють»
 </h2>
 
-<p>
 
+<div class="description">
+
+<p>
 Він пішов захищати Україну,
 залишивши вдома тих, хто щодня
 чекає його повернення.
-
 </p>
 
-<p>
 
+<p>
 З 29 червня 2024 року
 Олег вважається зниклим безвісти
 під час виконання бойового завдання.
-
 </p>
+
 
 <p>
-
-Цей сайт створений як місце віри, надії та пам'яті.
-
+Цей сайт створений як місце віри,
+надії та пам'яті.
 </p>
 
+</div>
+
+
+
 <div class="counter">
-
-
 
 <div id="timer"></div>
 
 </div>
-  <p class="waiting-text">
-Скільки б часу не минуло — ми чекаємо тебе щодня.
+
+
+
+<p class="waiting-text">
+Ми чекаємо тебе щодня.
 Віримо у твоє повернення.
 </p>
 
 
+
 <div class="buttons">
 
-<a href="about.html">Про Олега</a>
+<a href="about.html">
+Про Олега
+</a>
 
-<a href="timeline.html">Хроніка боротьби</a>
+
+<a href="timeline.html">
+Хроніка боротьби
+</a>
 
 </div>
+
 
 </div>
 
 </header>
-  <script>
+
+
+<script>
 
 const startDate = new Date("2024-06-29T00:00:00");
+
 
 function updateTimer(){
 
@@ -100,6 +122,7 @@ const minutes = Math.floor((diff / (1000 * 60)) % 60);
 const seconds = Math.floor((diff / 1000) % 60);
 
 
+
 document.getElementById("timer").innerHTML =
 days + " днів " +
 hours + " год " +
@@ -113,7 +136,9 @@ updateTimer();
 
 setInterval(updateTimer,1000);
 
+
 </script>
+
 
 </body>
 
