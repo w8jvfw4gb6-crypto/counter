@@ -584,3 +584,37 @@ h2{
 }
 
 }
+.service-gallery{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-bottom:35px;
+
+}
+
+.service-photo{
+
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+@media(max-width:900px){
+
+.service-gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+.service-photo{
+
+    height:380px;
+
+}
+
+}
