@@ -527,3 +527,26 @@ h2{
     line-height:1.7;
     color:#cfd8e5;
 }
+.service-media{
+    margin-top:30px;
+}
+
+
+.service-photo{
+    width:100%;
+    max-width:700px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+
+.video-block{
+    margin-top:40px;
+}
+
+
+.video-block video{
+    width:100%;
+    max-width:700px;
+    border-radius:20px;
+}
