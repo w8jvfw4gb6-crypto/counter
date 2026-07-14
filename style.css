@@ -1,5 +1,5 @@
 /* ===========================
-   ЗАГАЛЬНІ СТИЛІ
+   ОСНОВНІ НАЛАШТУВАННЯ
 =========================== */
 
 *{
@@ -13,9 +13,10 @@ html{
 }
 
 body{
-    font-family:'Montserrat',sans-serif;
+    font-family:'Montserrat', sans-serif;
     background:#09111d;
-    color:#fff;
+    color:#ffffff;
+    line-height:1.6;
     overflow-x:hidden;
 }
 
@@ -26,1132 +27,618 @@ img{
 
 a{
     text-decoration:none;
-    transition:.3s;
+    color:inherit;
 }
 
-/* ===========================
-   ГОЛОВНА СТОРІНКА
-=========================== */
-
-.hero{
-
-    position:relative;
-    width:100%;
-    min-height:100vh;
-    overflow:hidden;
-
-}
-
-.hero-image{
-
-    position:absolute;
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-    object-position:center 15%;
-
-}
-
-.overlay{
-
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
-        90deg,
-        rgba(5,10,18,.88),
-        rgba(5,10,18,.35)
-    );
-
-    z-index:1;
-
-}
-
-.hero-content{
-
-    position:relative;
-    z-index:2;
-
-    width:45%;
-
-    margin-left:8%;
-
-    padding:60px 0;
-
-}
-
-.hero-content h1{
-
-    font-size:64px;
-    line-height:1.1;
-    margin-bottom:25px;
-
-    text-shadow:0 4px 15px rgba(0,0,0,.8);
-
-}
-
-.hero-content h2{
-
-    font-size:22px;
-    font-weight:400;
-    line-height:1.5;
-
-    color:#d7dfeb;
-
-    margin-bottom:35px;
-
-}
-
-.description{
-
-    max-width:450px;
-
-}
-
-.description p{
-
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:18px;
-
-}
-
-.counter{
-
-    text-align:center;
-    margin-top:35px;
-
-}
-
-#timer{
-
-    font-size:32px;
-    font-weight:700;
-
-}
-
-.waiting-text{
-
-    margin-top:20px;
-
-    text-align:center;
-
-    font-size:20px;
-    font-style:italic;
-
-}
-
-.buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    margin-top:40px;
-
-}
-
-.buttons a{
-
-    display:inline-flex;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:15px 34px;
-
-    border-radius:50px;
-
-    border:2px solid rgba(255,255,255,.35);
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(10px);
-
-    color:#fff;
-
-    font-size:17px;
-
-}
-
-.buttons a:hover{
-
-    background:#5ba8ff;
-
-    transform:translateY(-3px);
-
-}
-
-/* ===========================
-   МОБІЛЬНА ВЕРСІЯ
-=========================== */
-
-@media(max-width:900px){
-
-.hero{
-
-    min-height:110vh;
-
-}
-
-.hero-content{
-
+.container{
     width:90%;
-
-    margin:0 auto;
-
-    padding:40px 0;
-
+    max-width:1200px;
+    margin:auto;
 }
 
-.hero-content h1{
 
-    font-size:42px;
-
-}
-
-.hero-content h2{
-
-    font-size:18px;
-
-}
-
-.description p{
-
-    font-size:16px;
-
-}
-
-#timer{
-
-    font-size:24px;
-
-}
-
-.buttons{
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.buttons a{
-
-    width:260px;
-
-}
-
-}
 /* ===========================
-   СТОРІНКА "ПРО ОЛЕГА"
+   ЗАГОЛОВКИ
 =========================== */
 
-.about-page{
-
-    min-height:100vh;
-    background:#09111d;
-    color:#fff;
-
-    padding:60px 8%;
-
-    text-align:center;
-
-}
-
-.about-page h1{
-
-    font-size:50px;
-    margin-bottom:20px;
-
-    text-shadow:0 5px 15px rgba(0,0,0,.5);
-
-}
-
-.subtitle{
-
-    font-size:22px;
-    color:#d7dfeb;
-
-    margin-bottom:45px;
-
-    line-height:1.6;
-
-}
-
-.about-photo{
-
-    width:320px;
-    height:430px;
-
-    margin:0 auto 45px;
-
-    object-fit:cover;
-    object-position:center top;
-
-    border-radius:22px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.45);
-
-}
-
-.about-text{
-
-    max-width:850px;
-
-    margin:0 auto;
-
-}
-
-.about-text p{
-
-    font-size:20px;
-    line-height:1.9;
-
-    margin-bottom:25px;
-
-    color:#f5f5f5;
-
-}
-
-.story h2{
-
-    margin-top:60px;
-    margin-bottom:30px;
-
-    font-size:34px;
-
-    text-align:center;
-
-}
-
-.story p{
-
-    font-size:20px;
-    line-height:1.9;
-
-    margin-bottom:22px;
-
-}
-
-.final-quote{
-
-    max-width:900px;
-
-    margin:70px auto 40px;
-
-    padding:35px;
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.12);
-
-    text-align:center;
-
-    font-size:24px;
-
-    font-style:italic;
-
-    color:#d7dfeb;
-
-    line-height:1.8;
-
-}
-
-.back-button{
-
-    display:inline-flex;
-
-    justify-content:center;
-    align-items:center;
-
-    margin-top:35px;
-
-    padding:15px 34px;
-
-    border-radius:50px;
-
-    border:2px solid rgba(255,255,255,.35);
-
-    background:rgba(255,255,255,.08);
-
-    color:#fff;
-
-    backdrop-filter:blur(10px);
-
-}
-
-.back-button:hover{
-
-    background:#5ba
-    /* ===========================
-   СТОРІНКА "СЛУЖБА"
-=========================== */
-
-.service-page{
-
-    min-height:100vh;
-    background:#09111d;
-    color:#fff;
-
-    padding:60px 8%;
-
-    text-align:center;
-
-}
-
-.service-page h1{
-
-    font-size:50px;
-    margin-bottom:20px;
-
-    text-shadow:0 5px 18px rgba(0,0,0,.5);
-
-}
-
-.service-page h2{
-
-    font-size:30px;
-    margin:45px 0 25px;
-
-    color:#ffffff;
-
-}
-
-.service-text{
-
-    max-width:900px;
-    margin:0 auto;
-
-}
-
-.service-text p{
-
-    font-size:20px;
-    line-height:1.9;
-    margin-bottom:22px;
-
-}
-
-.service-gallery{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:22px;
-
-    margin:40px 0;
-
-}
-
-.service-photo{
-
-    width:100%;
-    height:430px;
-
-    object-fit:cover;
-
-    border-radius:22px;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.35);
-
-    transition:.35s;
-
-}
-
-.service-photo:hover{
-
-    transform:scale(1.03);
-
-}
-
-.video-block{
-
-    margin-top:45px;
-
-}
-
-.video-block video{
-
-    width:100%;
-    max-width:800px;
-
-    border-radius:22px;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
-
-}
-
-.back-button{
-
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    margin-top:40px;
-
-    padding:15px 34px;
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,.08);
-
-    border:2px solid rgba(255,255,255,.35);
-
-    color:#fff;
-
-    backdrop-filter:blur(10px);
-
-    transition:.3s;
-
-}
-
-.back-button:hover{
-
-    background:#5ba8ff;
-
-    transform:translateY(-3px);
-
-}
-
-/* ===== Мобільна версія ===== */
-
-@media(max-width:900px){
-
-.service-page{
-
-    padding:40px 5%;
-
-}
-
-.service-page h1{
-
-    font-size:36px;
-
-}
-
-.service-page h2{
-
-    font-size:26px;
-
-}
-
-.service-text p{
-
-    font-size:17px;
-
-}
-
-.service-gallery{
-
-    grid-template-columns:1fr;
-
-}
-
-.service-photo{
-
-    height:360px;
-
-}
-
-}
-/* ===========================
-   СТОРІНКА "Я — ТВІЙ ГОЛОС"
-=========================== */
-
-.voice-page{
-
-    min-height:100vh;
-    background:#09111d;
-    color:#fff;
-
-    padding:60px 8%;
-
-}
-
-.voice-page h1{
-
-    text-align:center;
-
-    font-size:58px;
-
+h1,h2,h3{
     font-weight:700;
-
-    margin-bottom:40px;
-
-    letter-spacing:1px;
-
-    text-shadow:
-        0 0 18px rgba(91,168,255,.35),
-        0 5px 20px rgba(0,0,0,.6);
-
+    letter-spacing:0.5px;
 }
 
-.top-home{
-
-    margin-bottom:45px;
-
-}
-
-.top-home a{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:14px 24px;
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(201,168,106,.45);
-
-    color:#c9a86a;
-
-    backdrop-filter:blur(8px);
-
-    transition:.3s;
-
-}
-
-.top-home a:hover{
-
-    background:#c9a86a;
-
-    color:#09111d;
-
-    transform:translateY(-3px);
-
-}
-
-/* ===== ЦИТАТА ===== */
-
-.voice-quote{
-
-    max-width:850px;
-
-    margin:0 auto 70px;
-
-    padding:40px;
-
+h2{
     text-align:center;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.12);
-
-    border-radius:25px;
-
-    box-shadow:0 18px 45px rgba(0,0,0,.35);
-
+    font-size:36px;
+    margin-bottom:40px;
 }
 
-.voice-quote p{
-
-    font-size:28px;
-
-    line-height:1.8;
-
-    font-style:italic;
-
-    color:#d7dfeb;
-
+p{
+    font-size:17px;
 }
 
-/* ===== ВСТУП ===== */
 
-.voice-intro{
+/* ===========================
+   КНОПКИ
+=========================== */
 
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    border-radius:40px;
+    background:#c9a227;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+    margin-top:20px;
+}
+
+.btn:hover{
+    background:#e0b83c;
+    transform:translateY(-3px);
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    padding:40px 20px;
+    background:
+    linear-gradient(
+    rgba(9,17,29,.75),
+    rgba(9,17,29,.95)
+    ),
+    url("voice0.jpg") center/cover no-repeat;
+}
+
+
+.hero-content{
     max-width:900px;
-
-    margin:0 auto 80px;
-
+    animation:fadeUp 1.5s ease;
 }
 
-.voice-intro p{
 
+.hero h1{
+    font-size:56px;
+    margin-bottom:25px;
+}
+
+
+.hero p{
+    font-size:24px;
+    font-style:italic;
+    color:#ddd;
+}
+
+
+/* ===========================
+   СЕКЦІЇ
+=========================== */
+
+section{
+    padding:80px 0;
+}
+
+
+.section-dark{
+    background:#0d1828;
+}
+
+
+.section-title{
+    position:relative;
+    display:inline-block;
+}
+
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background:#c9a227;
+    margin:15px auto;
+}
+
+
+/* ===========================
+   ЦИТАТА
+=========================== */
+
+.quote{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:50px 30px;
+    font-size:28px;
+    font-style:italic;
+    color:#f0f0f0;
+}
+
+
+.quote span{
+    display:block;
+    margin-top:20px;
+    color:#c9a227;
     font-size:20px;
-
-    line-height:1.9;
-
-    margin-bottom:24px;
-
 }
 
-/* ===== ХРОНОЛОГІЯ ===== */
+
+/* ===========================
+   ХРОНОЛОГІЯ
+=========================== */
 
 .timeline{
-
     position:relative;
-
-    max-width:980px;
-
-    margin:0 auto;
-
+    max-width:1000px;
+    margin:auto;
 }
+
 
 .timeline::before{
-
     content:"";
-
     position:absolute;
-
-    left:24px;
-
+    left:50%;
     top:0;
-
     bottom:0;
-
     width:3px;
-
-    background:linear-gradient(#5ba8ff,#c9a86a);
-
+    background:#c9a227;
+    transform:translateX(-50%);
 }
+
 
 .timeline-item{
-
+    width:50%;
+    padding:20px 40px;
     position:relative;
-
-    margin:70px 0;
-
-    padding-left:75px;
-
+    animation:fadeUp .8s ease;
 }
+
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
 
 .timeline-item::before{
-
     content:"";
-
     position:absolute;
-
-    left:13px;
-
-    top:8px;
-
-    width:22px;
-
-    height:22px;
-
+    top:35px;
+    width:18px;
+    height:18px;
+    background:#c9a227;
     border-radius:50%;
-
-    background:#5ba8ff;
-
     border:4px solid #09111d;
-
-    box-shadow:0 0 18px rgba(91,168,255,.7);
-
 }
+
+
+.timeline-item:nth-child(odd)::before{
+    right:-10px;
+}
+
+
+.timeline-item:nth-child(even)::before{
+    left:-10px;
+}
+
 
 .timeline-date{
-
-    color:#5ba8ff;
-
-    font-size:21px;
-
+    color:#c9a227;
+    font-size:22px;
     font-weight:700;
-
-    margin-bottom:18px;
-
+    margin-bottom:15px;
 }
 
-.timeline-content{
 
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:25px;
-
-    padding:35px;
-
-    box-shadow:0 18px 45px rgba(0,0,0,.35);
-
-    transition:.35s;
-
+.timeline-card{
+    background:#111f33;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
-.timeline-content:hover{
 
-    transform:translateY(-6px);
-
-    box-shadow:0 25px 55px rgba(0,0,0,.45);
-
+.timeline-card h3{
+    margin-bottom:15px;
+    font-size:24px;
 }
 
-.timeline-content h2{
 
-    color:#fff;
-
-    margin-bottom:22px;
-
+.timeline-card p{
+    color:#ddd;
 }
 
-.timeline-content p{
 
-    font-size:18px;
-
-    line-height:1.85;
-
-    margin-bottom:20px;
-
-}
-
-.featured .timeline-content{
-
-    border:1px solid rgba(91,168,255,.45);
-
-}
-
-/* ===== ФОТО ===== */
-
-.timeline-photo{
-
-    width:100%;
-
-    margin-top:25px;
-
-    border-radius:22px;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
-
-    transition:.35s;
-
-    cursor:pointer;
-
-}
-
-.timeline-photo:hover{
-
-    transform:scale(1.02);
-
-}
 /* ===========================
-   ГАЛЕРЕЯ
+   ФОТО В ХРОНОЛОГІЇ
 =========================== */
 
-.gallery{
-
+.event-gallery{
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:22px;
-
-    margin-top:30px;
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:25px;
 }
 
-.gallery img{
 
+.event-gallery img{
+    height:260px;
     width:100%;
-    height:340px;
-
     object-fit:cover;
-
-    border-radius:22px;
-
-    cursor:pointer;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.4);
-
-    transition:.35s;
-
+    border-radius:18px;
+    transition:.4s;
 }
 
-.gallery img:hover{
 
-    transform:scale(1.03);
-
+.event-gallery img:hover{
+    transform:scale(1.04);
 }
+
 
 /* ===========================
    ВІДЕО
 =========================== */
 
-.timeline-video{
-
-    width:100%;
-
-    margin-top:28px;
-
-    border-radius:22px;
-
-    overflow:hidden;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
-
-}
-
-.youtube-video{
-
+.video-box{
     margin-top:30px;
-
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
 }
 
-.youtube-video iframe{
 
+.video-box video{
     width:100%;
-
-    height:500px;
-
-    border:none;
-
-    border-radius:22px;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
-
+    display:block;
 }
 
+
 /* ===========================
-   ЦИТАТА ЛАНІВЦІ
+   АНІМАЦІЇ
 =========================== */
 
-.event-quote{
+@keyframes fadeUp{
 
-    margin:35px 0;
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
 
-    padding:28px;
-
-    border-radius:22px;
-
-    background:rgba(91,168,255,.08);
-
-    border-left:4px solid #5ba8ff;
-
-    font-size:24px;
-
-    line-height:1.7;
-
-    text-align:center;
-
-    font-style:italic;
-
-    color:#d7dfeb;
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
-
 /* ===========================
-   ФОТОАЛЬБОМ
+   ВЕЛИКА ГАЛЕРЕЯ ПАМ'ЯТІ
 =========================== */
 
-.photo-album{
-
-    max-width:1200px;
-
-    margin:90px auto 0;
-
+.memory-gallery{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-.photo-album h2{
 
+.memory-gallery figure{
+    background:#111f33;
+    padding:15px;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+
+.memory-gallery figure:hover{
+    transform:translateY(-8px);
+}
+
+
+.memory-gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+
+.memory-gallery figcaption{
     text-align:center;
-
-    font-size:42px;
-
-    margin-bottom:20px;
-
+    margin-top:15px;
+    color:#ddd;
+    font-size:15px;
 }
 
-.photo-album p{
-
-    max-width:850px;
-
-    margin:0 auto 40px;
-
-    text-align:center;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    color:#d7dfeb;
-
-}
 
 /* ===========================
-   КНОПКА НАЗАД
+   ЛЮДИ — ГОЛОС ОЛЕГА
+=========================== */
+
+.people{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+
+.person-card{
+    background:#111f33;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    transition:.4s;
+}
+
+
+.person-card:hover{
+    transform:translateY(-8px);
+}
+
+
+.person-card img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:0 auto 20px;
+    border:3px solid #c9a227;
+}
+
+
+.person-card h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+
+.person-card p{
+    color:#ccc;
+    font-size:16px;
+}
+
+
+/* ===========================
+   ОКРЕМИЙ БЛОК АКЦІЇ
+=========================== */
+
+.action-block{
+    background:#111f33;
+    border-radius:25px;
+    padding:35px;
+    margin:40px 0;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+
+.action-block h3{
+    color:#c9a227;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+
+.action-block p{
+    color:#ddd;
+}
+
+
+/* ===========================
+   ПОСИЛАННЯ / СОЦМЕРЕЖІ
+=========================== */
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+
+.social-links a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#111f33;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    transition:.3s;
+}
+
+
+.social-links a:hover{
+    background:#c9a227;
+    transform:translateY(-5px);
+}
+
+
+/* ===========================
+   ФУТЕР
+=========================== */
+
+footer{
+    background:#050b13;
+    text-align:center;
+    padding:40px 20px;
+    color:#aaa;
+}
+
+
+footer strong{
+    color:#c9a227;
+}
+
+
+/* ===========================
+   КНОПКА НА ГОЛОВНУ
 =========================== */
 
 .back-home{
-
     text-align:center;
-
-    margin:70px 0 40px;
-
+    margin-top:50px;
 }
 
-.back-home a{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:16px 38px;
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,.08);
-
-    border:2px solid rgba(255,255,255,.3);
-
-    color:#fff;
-
-    backdrop-filter:blur(10px);
-
-    transition:.35s;
-
-}
-
-.back-home a:hover{
-
-    background:#5ba8ff;
-
-    transform:translateY(-3px);
-
-}
 
 /* ===========================
-   МОБІЛЬНА ВЕРСІЯ
+   АДАПТАЦІЯ ПІД ТЕЛЕФОН
 =========================== */
 
 @media(max-width:900px){
 
-.voice-page{
 
-    padding:40px 5%;
+    .hero h1{
+        font-size:38px;
+    }
 
-}
 
-.voice-page h1{
+    .hero p{
+        font-size:18px;
+    }
 
-    font-size:38px;
 
-}
+    h2{
+        font-size:30px;
+    }
 
-.voice-quote{
 
-    padding:25px;
+    .timeline::before{
+        left:20px;
+    }
 
-}
 
-.voice-quote p{
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd){
+        width:100%;
+        left:0;
+        padding-left:60px;
+        padding-right:10px;
+        text-align:left;
+    }
 
-    font-size:21px;
 
-}
+    .timeline-item::before,
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before{
+        left:10px;
+        right:auto;
+    }
 
-.voice-intro p{
 
-    font-size:17px;
+    .quote{
+        font-size:22px;
+        padding:30px 15px;
+    }
 
-}
 
-.timeline::before{
+    .event-gallery img{
+        height:220px;
+    }
 
-    left:12px;
 
-}
-
-.timeline-item{
-
-    padding-left:38px;
-
-    margin:50px 0;
-
-}
-
-.timeline-item::before{
-
-    left:2px;
-
-}
-
-.timeline-content{
-
-    padding:22px;
-
-}
-
-.timeline-content h2{
-
-    font-size:23px;
+    .memory-gallery img{
+        height:250px;
+    }
 
 }
 
-.timeline-content p{
 
-    font-size:16px;
 
-}
+@media(max-width:500px){
 
-.timeline-photo{
 
-    border-radius:18px;
+    section{
+        padding:50px 0;
+    }
 
-}
 
-.gallery{
+    .container{
+        width:92%;
+    }
 
-    grid-template-columns:1fr;
 
-}
+    .hero{
+        min-height:90vh;
+    }
 
-.gallery img{
 
-    height:300px;
+    .hero h1{
+        font-size:32px;
+    }
 
-}
 
-.youtube-video iframe{
+    .btn{
+        padding:12px 25px;
+    }
 
-    height:240px;
 
-}
+    .timeline-card{
+        padding:20px;
+    }
 
-.photo-album h2{
 
-    font-size:30px;
+    .timeline-card h3{
+        font-size:20px;
+    }
 
-}
 
-.photo-album p{
+    .action-block{
+        padding:25px 20px;
+    }
 
-    font-size:17px;
-
-}
-
-.event-quote{
-
-    font-size:20px;
-
-}
-
-.back-home a{
-
-    width:100%;
-
-    max-width:300px;
 
 }
 
-.top-home a{
 
-    font-size:15px;
+/* ===========================
+   ПЛАВНА ПОЯВА ЕЛЕМЕНТІВ
+=========================== */
 
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
 }
 
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* ===========================
+   ФІНАЛЬНИЙ АКЦЕНТ
+=========================== */
+
+.gold{
+    color:#c9a227;
+}
+
+
+.center{
+    text-align:center;
+}
+
+
+.hidden{
+    display:none;
 }
