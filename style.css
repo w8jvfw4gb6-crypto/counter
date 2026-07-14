@@ -225,7 +225,7 @@ a{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 
     gap:20px;
 
@@ -788,4 +788,7 @@ a{
     aspect-ratio:16/9;
     display:block;
     border:none;
+}
+.lanivtsi-gallery{
+    grid-template-columns:repeat(3,1fr);
 }
