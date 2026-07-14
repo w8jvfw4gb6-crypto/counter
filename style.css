@@ -904,3 +904,27 @@ h2{
 }
 
 }
+.top-home{
+    width:100%;
+    margin-bottom:40px;
+}
+
+.top-home a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(201,168,106,.4);
+    color:#c9a86a;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+    backdrop-filter:blur(8px);
+}
+
+.top-home a:hover{
+    background:#c9a86a;
+    color:#09111d;
+    transform:translateY(-2px);
+}
