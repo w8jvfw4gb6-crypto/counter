@@ -349,15 +349,15 @@ a{
 }
 
 .voice-intro{
-    max-width:900px;
+    max-width:720px;
     margin:auto;
+    font-size:17px;
+    line-height:1.9;
 }
 
-font-size:17px;
-line-height:1.9;
-max-width:720px;
-margin:auto;
-
+.voice-intro p{
+    margin-bottom:20px;
+}
 /* ==========================================
    TIMELINE
 ========================================== */
