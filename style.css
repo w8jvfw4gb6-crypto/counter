@@ -309,18 +309,29 @@ a{
 }
 
 .voice-quote{
-    max-width:850px;
-    margin:0 auto 50px;
-    padding:30px;
+
+    max-width:650px;
+
+    margin:0 0 60px;
+
+    padding:25px 30px;
+
     border-left:4px solid white;
+
     background:#111b2b;
-    border-radius:14px;
+
+    border-radius:16px;
+
 }
 
 .voice-quote p{
-    text-align:center;
-    font-size:28px;
+
+    text-align:left;
+
+    font-size:22px;
+
     line-height:1.8;
+
 }
 
 .voice-intro{
@@ -624,4 +635,8 @@ a{
     grid-template-columns:1fr;
 }
 
+}
+.heart{
+    font-size:38px;
+    vertical-align:8px;
 }
