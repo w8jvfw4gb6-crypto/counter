@@ -145,11 +145,16 @@ a{
     transition:.3s;
 }
 
+.buttons a{
+    transition:.35s;
+}
+
 .buttons a:hover{
     background:white;
     color:#07111d;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,255,255,.25);
 }
-
 /* ==========================================
    СТОРІНКА ПРО ОЛЕГА
 ========================================== */
@@ -457,10 +462,15 @@ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     transition:.3s;
 }
 
-.back-button:hover,
-.back-home a:hover{
+.buttons a{
+    transition:.35s;
+}
+
+.buttons a:hover{
     background:white;
     color:#07111d;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,255,255,.25);
 }
 /* ==========================================
    ФІНАЛЬНІ СТИЛІ
@@ -887,4 +897,7 @@ html,body{
     gap:12px;
 }
 
+}
+.support-gallery img.large{
+    grid-column:span 2;
 }
