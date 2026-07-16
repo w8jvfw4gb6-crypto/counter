@@ -513,8 +513,23 @@ a{
 .voice-page,
 .timeline-item,
 .gallery img,
-.service-photo{
-    animation:fadeUp .8s ease;
+.service-photo,
+.support-section{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
 }
 
 @keyframes fadeUp{
