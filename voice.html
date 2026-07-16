@@ -488,8 +488,18 @@
 
 
 </div>
+    
+    <div id="lightbox">
 
-class="large">
+    <span id="close-lightbox">&times;</span>
+
+    <span id="prev-photo">&#10094;</span>
+
+    <img id="lightbox-img">
+
+    <span id="next-photo">&#10095;</span>
+
+</div>
 
 <script>
 
@@ -625,16 +635,9 @@ lightbox.addEventListener("touchend",(e)=>{
 document.querySelectorAll(
 ".hero-content, .about-page, .voice-page, .timeline-item, .gallery img, .service-photo, .support-section"
 ).forEach(el=>observer.observe(el));
+
 </script>
 </body>
 
 </html>
 
-@media(max-width:768px){
-
-#prev-photo,
-#next-photo{
-    display:none;
-}
-
-}
