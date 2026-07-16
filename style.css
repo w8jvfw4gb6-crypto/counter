@@ -504,10 +504,8 @@ a{
 .support-section{
 
     opacity:0;
-
     transform:translateY(40px);
-
-   transition:opacity .8s ease, transform .8s ease;
+    transition:opacity .8s ease, transform .8s ease;
 
 }
 
