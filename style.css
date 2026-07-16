@@ -495,19 +495,6 @@ a{
    ПЛАВНА ПОЯВА
 ========================================== */
 
-.hero-content,
-.about-page,
-.voice-page,
-.timeline-item,
-.gallery img,
-.service-photo,
-.support-section{
-
-    opacity:0;
-    transform:translateY(40px);
-    transition:none;
-
-}
 
 .show{
 
