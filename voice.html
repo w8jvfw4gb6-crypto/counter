@@ -493,33 +493,74 @@ class="large">
 
 <script>
 
-const galleryImages=document.querySelectorAll(".gallery img, .support-gallery img, .timeline-photo, .about-photo, .service-photo");
+const galleryImages = document.querySelectorAll(
+".gallery img, .support-gallery img, .timeline-photo, .about-photo, .service-photo"
+);
 
-const lightbox=document.getElementById("lightbox");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
-const lightboxImg=document.getElementById("lightbox-img");
+const close = document.getElementById("close-lightbox");
+const prev = document.getElementById("prev-photo");
+const next = document.getElementById("next-photo");
 
-const close=document.getElementById("close-lightbox");
+let currentIndex = 0;
 
-galleryImages.forEach(img=>{
+function showImage(index){
+
+    lightbox.style.display = "flex";
+
+    lightboxImg.src = galleryImages[index].src;
+
+}
+
+galleryImages.forEach((img,index)=>{
 
     img.addEventListener("click",()=>{
 
-        lightbox.style.display="flex";
+        currentIndex = index;
 
-        lightboxImg.src=img.src;
+        showImage(currentIndex);
 
     });
 
 });
 
-close.onclick=()=>{
+next.onclick = ()=>{
 
-    lightbox.style.display="none";
+    currentIndex++;
+
+    if(currentIndex >= galleryImages.length){
+
+        currentIndex = 0;
+
+    }
+
+    showImage(currentIndex);
 
 };
 
-lightbox.onclick=e=>{
+prev.onclick = ()=>{
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+
+        currentIndex = galleryImages.length-1;
+
+    }
+
+    showImage(currentIndex);
+
+};
+
+close.onclick = ()=>{
+
+    lightbox.style.display = "none";
+
+};
+
+lightbox.onclick = e=>{
 
     if(e.target===lightbox){
 
@@ -529,7 +570,52 @@ lightbox.onclick=e=>{
 
 };
 
+document.addEventListener("keydown",e=>{
+
+    if(lightbox.style.display!=="flex") return;
+
+    if(e.key==="ArrowRight") next.click();
+
+    if(e.key==="ArrowLeft") prev.click();
+
+    if(e.key==="Escape") lightbox.style.display="none";
+
+});
+let startX = 0;
+
+lightbox.addEventListener("touchstart",(e)=>{
+
+    startX = e.touches[0].clientX;
+
+});
+
+lightbox.addEventListener("touchend",(e)=>{
+
+    let endX = e.changedTouches[0].clientX;
+
+    if(startX - endX > 60){
+
+        next.click();
+
+    }
+
+    if(endX - startX > 60){
+
+        prev.click();
+
+    }
+
+});
 </script>
 </body>
 
 </html>
+
+@media(max-width:768px){
+
+#prev-photo,
+#next-photo{
+    display:none;
+}
+
+}
