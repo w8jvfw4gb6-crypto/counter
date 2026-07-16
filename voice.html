@@ -519,6 +519,7 @@ let currentIndex = 0;
 function showImage(index){
 
     lightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
 
     lightboxImg.src = galleryImages[index].src;
 
@@ -567,19 +568,20 @@ prev.onclick = ()=>{
 close.onclick = ()=>{
 
     lightbox.style.display = "none";
+    document.body.style.overflow = "";
 
-};
+}; 
 
 lightbox.onclick = e=>{
 
     if(e.target===lightbox){
 
         lightbox.style.display="none";
+        document.body.style.overflow = "";
 
     }
 
 };
-
 document.addEventListener("keydown",e=>{
 
     if(lightbox.style.display!=="flex") return;
@@ -588,7 +590,10 @@ document.addEventListener("keydown",e=>{
 
     if(e.key==="ArrowLeft") prev.click();
 
-    if(e.key==="Escape") lightbox.style.display="none";
+    if(e.key==="Escape"){
+    lightbox.style.display="none";
+    document.body.style.overflow="";
+}
 
 });
 let startX = 0;
