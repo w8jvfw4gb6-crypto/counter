@@ -872,19 +872,20 @@ html,body{
 @media (max-width:768px){
 
 .support-videos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:12px;
 }
 
 .support-videos video{
-    width:180px;
+    width:100%;
 }
 
 .support-gallery{
     gap:12px;
 }
 
-}
-.support-gallery img.large{
+}.support-gallery img.large{
     grid-column:span 2;
 }
 /* ==========================
