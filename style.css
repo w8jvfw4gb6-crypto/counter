@@ -887,7 +887,9 @@ html,body{
     gap:12px;
 }
 
-}.support-gallery img.large{
+}.
+
+support-gallery img.large{
     grid-column:span 2;
 }
 /* ==========================
